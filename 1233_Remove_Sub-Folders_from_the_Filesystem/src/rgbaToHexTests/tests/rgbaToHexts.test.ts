@@ -1,5 +1,12 @@
 import { RGBAToHex } from '../rbaToHex';
 
+describe('supplying hex insted of rgba', () => {
+  const hex = '#f2f1f1';
+  const expectedHex = '#f2f1f1';
+
+  expect(RGBAToHex(hex)).toEqual(expectedHex);
+});
+
 describe('convert rgba color to hex', () => {
   test('converts color 1 correctly', () => {
     const rgbaSrt = 'rgba(242, 241, 241, 0)';

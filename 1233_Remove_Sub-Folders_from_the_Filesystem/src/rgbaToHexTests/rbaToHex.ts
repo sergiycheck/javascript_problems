@@ -1,4 +1,7 @@
 export function RGBAToHex(rgba: string) {
+  const hexRegex = /^#(?:[0-9a-fA-F]{3}){1,2}$/;
+  if (hexRegex.test(rgba)) return rgba;
+
   const rgbaOrRgbRegex =
     /^rgba?\((\d{1,3})\,\s(\d{1,3})\,\s(\d{1,3})\,?\s?(\d*(?:\.\d+)?)?\)$/;
 
