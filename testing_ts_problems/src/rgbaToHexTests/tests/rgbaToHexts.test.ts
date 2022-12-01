@@ -1,10 +1,34 @@
+import { text } from 'stream/consumers';
 import { RGBAToHex } from '../rbaToHex';
 
 describe('supplying hex insted of rgba', () => {
-  const hex = '#f2f1f1';
-  const expectedHex = '#f2f1f1';
+  test('supply hex insted of rgba 1', () => {
+    const hex = '#f2f1f1';
+    const expectedHex = '#f2f1f1';
 
-  expect(RGBAToHex(hex)).toEqual(expectedHex);
+    expect(RGBAToHex(hex)).toEqual(expectedHex);
+  });
+
+  test('supply hex insted of rgba 1', () => {
+    const hex = '#174d1c';
+    const expectedHex = '#174d1c';
+
+    expect(RGBAToHex(hex)).toEqual(expectedHex);
+  });
+
+  test('supply hex insted of rgba 2', () => {
+    const hex = '#677544';
+    const expectedHex = '#677544';
+
+    expect(RGBAToHex(hex)).toEqual(expectedHex);
+  });
+
+  test('supply hex insted of rgba 3', () => {
+    const hex = '#325581';
+    const expectedHex = '#325581';
+
+    expect(RGBAToHex(hex)).toEqual(expectedHex);
+  });
 });
 
 describe('convert rgba color to hex', () => {
