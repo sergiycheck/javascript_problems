@@ -78,18 +78,16 @@ export const calculatePoints = (
 
   const draw = includesCombination(drawCombinations, findCombination);
   if (draw) {
-    return pointsForMyChoice + getPointsForChoice(oponent);
+    return 3 + pointsForMyChoice;
   }
 
   return pointsForMyChoice;
 };
 
 export async function rockPaperScissors() {
-  // const linesArr = await readLinesOfFile(
-  //   path.resolve(process.cwd(), 'src/adventOfCode2022/rockPaperScissors/input')
-  // );
-
-  let linesArr = ['B X', 'B X', 'B X'];
+  const linesArr = await readLinesOfFile(
+    path.resolve(process.cwd(), 'src/adventOfCode2022/rockPaperScissors/input')
+  );
 
   const sum = linesArr.reduce((prev, curr) => {
     const [oponentStr, meStr] = curr.split(' ');
@@ -101,8 +99,6 @@ export async function rockPaperScissors() {
 
     return prev + points;
   }, 0);
-
-  // 11884 wrong
 
   console.log(sum);
 
