@@ -1,4 +1,4 @@
-import { readLinesOfFile } from './readlines';
+import { readLinesOfFile } from '../../utils/readLinesOfFile';
 import path from 'path';
 import process from 'process';
 

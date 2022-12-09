@@ -1,5 +1,5 @@
-import { mainReadElfsCalories } from './readFileElfsCalories';
+import { rockPaperScissors } from './adventOfCode2022/rockPaperScissors/index';
 
 (function main() {
-  mainReadElfsCalories();
+  rockPaperScissors();
 })();
