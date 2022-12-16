@@ -2,5 +2,5 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testRegex: 'src/rgbaToHexTests/tests',
+  testRegex: 'src/leecodeProblems/medium/tests',
 };
