@@ -1,5 +1,5 @@
-import { rockPaperScissors } from './adventOfCode2022/rockPaperScissors/index-2';
+import { ruckSackReorganization } from './adventOfCode2022/rucksack_reorganization/index2';
 
 (function main() {
-  rockPaperScissors();
+  ruckSackReorganization();
 })();
