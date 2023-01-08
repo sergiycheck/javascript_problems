@@ -1,5 +1,6 @@
-import { ruckSackReorganization } from './adventOfCode2022/rucksack_reorganization/index2';
+import { createAndRunServer } from "./nodejsTopics/multithreading/server";
+
 
 (function main() {
-  ruckSackReorganization();
+  createAndRunServer()
 })();
