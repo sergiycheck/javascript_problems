@@ -1,3 +1,5 @@
+import { calculateCount } from "./utils";
+
 const express = require("express");
 
 export const createAndRunServer = () => {
@@ -10,10 +12,7 @@ export const createAndRunServer = () => {
   });
 
   app.get("/blocking", async (req, res) => {
-    let counter = 0;
-    for (let i = 0; i < 20_000_000_000; i++) {
-      counter++;
-    }
+    const counter = await calculateCount()
     res.status(200).send(`result is ${counter}`);
   });
 
