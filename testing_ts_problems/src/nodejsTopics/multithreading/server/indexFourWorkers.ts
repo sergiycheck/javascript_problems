@@ -2,8 +2,11 @@ import express from 'express'
 import { Worker } from "worker_threads";
 import path from 'path';
 import { WorkerDataCurrent } from './types';
+import os from 'os';
 
-const THREAD_COUNT = 4;
+const cores = os.cpus();
+
+const THREAD_COUNT = cores.length;
 function createWorker(workerPath: string) {
   return new Promise(function (resolve, reject) {
 
