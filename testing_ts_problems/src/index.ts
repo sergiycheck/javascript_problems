@@ -1,6 +1,8 @@
-import { createAndRunServer } from "./nodejsTopics/multithreading/server";
+import { createAndRunServerWithOneWorker } from "./nodejsTopics/multithreading/server";
+import { createAndRunServerWithFourWorkers } from "./nodejsTopics/multithreading/server/indexFourWorkers";
 
 
 (function main() {
-  createAndRunServer()
+  createAndRunServerWithOneWorker(3000);
+  createAndRunServerWithFourWorkers(3001);
 })();

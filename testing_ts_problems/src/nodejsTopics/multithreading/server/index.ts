@@ -1,21 +1,29 @@
 import { calculateCount } from "./utils";
+import express from 'express'
+import { Worker } from "worker_threads";
+import path from 'path';
 
-const express = require("express");
 
-export const createAndRunServer = () => {
+export const createAndRunServerWithOneWorker = (passedPort?: number) => {
 
   const app = express();
-  const port = process.env.PORT || 3000;
+  const port = !passedPort ? process.env.PORT || 3000 : passedPort;
 
   app.get("/non-blocking/", (req, res) => {
     res.status(200).send("This page is non-blocking");
   });
 
   app.get("/blocking", async (req, res) => {
-    const counter = await calculateCount()
-    res.status(200).send(`result is ${counter}`);
-  });
+    const worker = new Worker(path.resolve(__dirname, './worker.js'));
 
+    worker.on('message', (data) => {
+      res.status(200).send(`result is ${data}`);
+    });
+
+    worker.on('err', (data) => {
+      res.status(200).send(`An error occurred: ${data}`);
+    });
+  });
 
   app.listen(port, () => {
     console.log(`App listening on port ${port}`);
