@@ -2,5 +2,5 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testRegex: 'src/leecodeProblems/medium/tests',
+  testRegex: 'src/algorithms/data-structures/hash-table/tests',
 };

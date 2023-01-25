@@ -1,4 +1,4 @@
-class HashTable {
+class HashTableV1 {
 
   values: object;
   length: number;
