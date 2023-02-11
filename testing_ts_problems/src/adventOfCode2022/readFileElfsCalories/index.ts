@@ -43,5 +43,4 @@ export async function mainReadElfsCalories() {
     }
   }
 
-  console.log(elfsMaxSumOfCaloriesWithItsIndex);
 }

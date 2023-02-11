@@ -2,5 +2,5 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testRegex: 'src/algorithms/data-structures/hash-table/tests',
+  testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"]
 };

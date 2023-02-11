@@ -68,5 +68,4 @@ export async function ruckSackReorganization() {
     sum += priority;
   }
 
-  console.log('sum ',sum);
 }

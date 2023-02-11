@@ -34,7 +34,6 @@ describe('hash table tests', () => {
     ht.set(data[0][0], data[0][1]);
     ht.set(data[1][0], data[1][1]);
 
-    console.log(ht.table)
 
     expect(ht.get(data[0][0])).toEqual(data[1])
     expect(ht.get(data[1][0])).toEqual(data[1])

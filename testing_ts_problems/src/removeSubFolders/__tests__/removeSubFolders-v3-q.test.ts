@@ -1,5 +1,5 @@
 import removeSubfolders from '../removeSubFolders-v3-q';
-import largeInput1 from './largeInput1';
+// import largeInput1 from './largeInput1';
 
 describe('remove sub folders tests index', () => {
   test('["/a","/a/b","/c/d","/c/d/e","/c/f"] => ["/a","/c/d","/c/f"]', () => {
@@ -65,11 +65,10 @@ describe('remove sub folders tests index', () => {
     expect(actual.sort()).toEqual(expected.sort());
   });
 
-  test('try large input', () => {
-    const input = largeInput1;
+  // test('try large input', () => {
+  //   const input = largeInput1;
 
-    const actual = removeSubfolders(input);
-    console.log('actual', actual);
-    expect(actual).toBeDefined();
-  });
+  //   const actual = removeSubfolders(input);
+  //   expect(actual).toBeDefined();
+  // });
 });

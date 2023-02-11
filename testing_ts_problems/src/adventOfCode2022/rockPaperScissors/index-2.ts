@@ -50,7 +50,6 @@ export async function rockPaperScissors() {
     return prev + points;
   }, 0);
 
-  console.log(sum);
 
   return sum;
 }

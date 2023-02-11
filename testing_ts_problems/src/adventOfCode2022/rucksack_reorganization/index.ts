@@ -67,7 +67,6 @@ export async function ruckSackReorganization() {
 
     const priority = allLettersPriorityObj[sameChar];
 
-    console.log(`sameChar, priority `,sameChar, priority);
 
     if(!Number.isNaN(priority)) {
       return prev + priority;
@@ -77,6 +76,5 @@ export async function ruckSackReorganization() {
 
   }, 0);
 
-  console.log('sum ',sum);
 
 }
