@@ -1,8 +1,5 @@
-import { createAndRunServerWithOneWorker } from "./nodejsTopics/multithreading/server";
-import { createAndRunServerWithFourWorkers } from "./nodejsTopics/multithreading/server/indexFourWorkers";
-
+import { fetchOwnCollection } from './web3/opensea/get-nfts';
 
 (function main() {
-  createAndRunServerWithOneWorker(3000);
-  createAndRunServerWithFourWorkers(3001);
+  fetchOwnCollection();
 })();
