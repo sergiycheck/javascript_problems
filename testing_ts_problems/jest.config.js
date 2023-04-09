@@ -3,5 +3,5 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   // testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"]
-  testMatch: ['**/pick-peaks.test.ts'],
+  testMatch: ['**/range-extractions.test.ts'],
 };

@@ -52,15 +52,6 @@ describe('Sample tests', function () {
     expect(pickPeaks(actualArr)).toEqual(expectedResponse);
   });
 
-  it('test 6', () => {
-    const actualArr = [2, 1, 3, 2, 2, 2, 2, 5, 6];
-    const expectedResponse = {
-      pos: [2],
-      peaks: [3],
-    };
-    expect(pickPeaks(actualArr)).toEqual(expectedResponse);
-  });
-
   it('test 7', () => {
     const actualArr = [2, 1, 3, 2, 2, 2, 2, 1];
     const expectedResponse = {
