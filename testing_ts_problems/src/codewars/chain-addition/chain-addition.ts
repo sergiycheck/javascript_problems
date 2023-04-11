@@ -1,19 +1,20 @@
-function add(n) {
-  let fn = function (n1) {
-    return add(n + n1);
+const sum = (...args) => args.reduce((p, c) => p + c);
+
+function add(...args) {
+  let fn = function (...args1) {
+    const result = sum(...args) + sum(...args1);
+    return add(result);
   };
 
   fn.valueOf = function () {
-    return n;
+    return sum(...args);
   };
 
   return fn;
 }
 
 export function testCurriedSum() {
-  const a = add(1)(2);
-  const b = add(3)(4);
-
-  console.log((a as any) == 3);
-  console.log((b as any) == 7);
+  console.log(+add(1, 2, 3)(2) == 8);
+  console.log(+add(1)(2)(2) == 5);
+  console.log(+add(1)(2, 5, 7)(2) == 17);
 }
