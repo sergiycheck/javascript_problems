@@ -1,5 +1,4 @@
-import { testSplitIntoRanges } from './codewars/range-extractions/range-extractions';
-
+import { testCurriedSum } from './codewars/chain-addition/chain-addition';
 (function main() {
-  testSplitIntoRanges();
+  testCurriedSum();
 })();
