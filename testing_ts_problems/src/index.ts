@@ -1,4 +1,5 @@
-import { testCurriedSum } from './codewars/chain-addition/chain-addition';
+import { mainExampleWithTypeorm } from './work_with_pg/typeorm_example/work-with-pg-typeorm';
+
 (function main() {
-  testCurriedSum();
+  mainExampleWithTypeorm();
 })();
