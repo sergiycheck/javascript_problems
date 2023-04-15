@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  mongo_db:
+    image: mongo
+    restart: always
+    ports:
+      - 27020:27017
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: user_password
+      MONGO_INITDB_DATABASE: example-db
+
+volumes:
+  mongo_data:
+
+networks:
+  default:
+    name: example-work-with-mongo-net
