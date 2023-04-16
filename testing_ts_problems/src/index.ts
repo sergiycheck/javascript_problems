@@ -1,5 +1,5 @@
-import { mainExampleWithTypeorm } from './work_with_dbs/posgres/typeorm_example/work-with-pg-typeorm';
+import { mainMongooseTests } from './work_with_dbs/mongodb/mongoose-index';
 
 (function main() {
-  mainExampleWithTypeorm();
+  mainMongooseTests();
 })();
